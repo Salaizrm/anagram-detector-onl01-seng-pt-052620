@@ -6,9 +6,8 @@ class Anagram
     @words = words
   end
 
-  def match(words)
-    array = []
-    array << words
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
   end
 
 end
